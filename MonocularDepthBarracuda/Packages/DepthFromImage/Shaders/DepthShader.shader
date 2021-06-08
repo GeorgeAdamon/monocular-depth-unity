@@ -8,7 +8,7 @@ Shader "Uncharted Limbo/Unlit/MiDaS Depth Visualization"
         Tags { "RenderType"="Opaque" }
         LOD 100
 
-        Cull Back
+        Cull Off    
        
         Pass
         {

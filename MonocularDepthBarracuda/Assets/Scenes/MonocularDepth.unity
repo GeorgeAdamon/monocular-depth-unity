@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &1317941153
+--- !u!1 &1204539628
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,9 +131,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1317941156}
-  - component: {fileID: 1317941155}
-  - component: {fileID: 1317941154}
+  - component: {fileID: 1204539631}
+  - component: {fileID: 1204539630}
+  - component: {fileID: 1204539629}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -141,21 +141,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1317941154
+--- !u!81 &1204539629
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317941153}
+  m_GameObject: {fileID: 1204539628}
   m_Enabled: 1
---- !u!20 &1317941155
+--- !u!20 &1204539630
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317941153}
+  m_GameObject: {fileID: 1204539628}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
@@ -192,20 +192,20 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!4 &1317941156
+--- !u!4 &1204539631
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317941153}
-  m_LocalRotation: {x: 0.03647238, y: 0.94797873, z: -0.11781359, w: 0.29347247}
-  m_LocalPosition: {x: -36, y: 16.6, z: 30}
+  m_GameObject: {fileID: 1204539628}
+  m_LocalRotation: {x: -0, y: 0.97463864, z: -0.22378479, w: 0}
+  m_LocalPosition: {x: 11.6, y: 17.1, z: 26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 14.169, y: 145.597, z: 0}
+  m_LocalEulerAnglesHint: {x: 25.863, y: 180, z: 0}
 --- !u!1 &1527805084
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +318,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527805084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.7, y: 0, z: 71.9}
+  m_LocalPosition: {x: 4.2, y: 0, z: 38.4}
   m_LocalScale: {x: 4.1244445, y: 2.32, z: 2.32}
   m_Children: []
   m_Father: {fileID: 0}

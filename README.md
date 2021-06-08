@@ -23,7 +23,6 @@ Add this line to your `manifest.json`:
 ```
 
 ## Usage
-
 ### Step 0
 Find the `DEPTH_FROM_IMAGE` prefab  
 ![](img/step0.png)
@@ -36,3 +35,9 @@ Use the Texture you like in the `Input Texture` slot. Works with RenderTextures 
 Parameterize the visual output in the `Depth Mesher` object. Use `Shader` method for best performance, or `Mesh` to get an actual tangible mesh.
 If `Color Texture` is left blank, the mesh will be colorized with the depth data by default.  
 ![](img/step2.png)
+
+## Performance
+**Sustained 60 fps** on GTX 970 & i7 5930K (2015 rig) when using the shader-based displacement.
+
+## Issues
+The mesh-based displacement doesn't fully utilize the `AsyncGPUReadback` command. A command queue needs to be implemented, to process pending commands.

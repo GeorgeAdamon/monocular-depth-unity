@@ -13,7 +13,6 @@ namespace UnchartedLimbo.NN.Depth
     {
         [Header("Object References")]
         public NNModel neuralNetworkModel;
-        public ComputeShader postProcess;
         public Texture       inputTexture;
 
         [Header("Events")]

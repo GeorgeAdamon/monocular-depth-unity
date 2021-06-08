@@ -7,5 +7,5 @@
 ### Package Manager
 Add this line to your `manifest.json`:
 ```json
-"ulc-nn-depth":""
+"ulc-nn-depth":"https://github.com/GeorgeAdamon/monocular-depth-unity.git?path=/"
 ```

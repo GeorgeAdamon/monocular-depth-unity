@@ -1,6 +1,13 @@
 # monocular-depth-unity
- Depth from Monocular Image using the MiDaS v2 library with Unity's Barracuda inference framework
+ **Depth from Monocular Image** using the [MiDaS v2](https://github.com/intel-isl/MiDaS) library with Unity's Barracuda inference framework.
+ This project includes the correct .onnx model that works well with Barracuda.
+ See discussions that led to this choice [here (Unity)]() and [here(Intel)](). (June 2021)
 
+## Requirements
+|Platform|Version|
+---|---
+|Unity|2021.1|
+|com.unity.barracuda|2.1.0-preview|
 
 ## Installation
 

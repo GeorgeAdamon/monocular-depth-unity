@@ -3,7 +3,7 @@
  
  This project includes the correct .onnx model that works well with Barracuda.  
  
- See discussions that led to this choice [here (Unity)](https://github.com/Unity-Technologies/barracuda-release/issues/187#issuecomment-856702114) and [here(Intel ISL)](https://github.com/intel-isl/MiDaS/issues/113#issuecomment-856693837). (June 2021)
+ See discussions that led to this choice [here (Unity)](https://github.com/Unity-Technologies/barracuda-release/issues/187#issuecomment-856702114) and [here (Intel ISL)](https://github.com/intel-isl/MiDaS/issues/113#issuecomment-856693837). (June 2021)
 
 ## Requirements
 |Platform|Version|

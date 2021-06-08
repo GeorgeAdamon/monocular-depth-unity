@@ -1,0 +1,26 @@
+{
+    "name": "UnchartedLimbo.NN.Depth",
+    "rootNamespace": "UnchartedLimbo.NN.Depth",
+    "references": [
+        "Unity.Burst",
+        "Unity.Barracuda",
+        "Unity.Mathematics",
+        "Unity.Jobs",
+        "Unity.Collections"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.barracuda",
+            "expression": "1.0.5",
+            "define": "_CHANNEL_SWAP"
+        }
+    ],
+    "noEngineReferences": false
+}

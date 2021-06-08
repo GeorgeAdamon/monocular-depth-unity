@@ -1,0 +1,26 @@
+{
+  "name": "ulc-nn-depth",
+  "version": "1.0.0",
+  "displayName": "Uncharted Limbo NN Depth",
+  "description": "Implementation of MiDaS model for depth calculation from monocular images",
+  "unity": "2021.1",
+  "dependencies": {
+    "com.unity.barracuda": "2.1.0-preview",
+    "com.unity.jobs": "0.8.0-preview.23",
+    "com.unity.burst":"1.6.0-pre.2",
+    "com.unity.collections":"0.15.0-preview.21",
+    "com.unity.mathematics":"1.2.1"
+  },
+  "keywords": [
+    "Neural Network",
+    "Depth",
+    "Monocular",
+    "MiDaS",
+    "Convolution"
+  ],
+  "author": {
+    "name": "Uncharted Limbo",
+    "email": "ga.adamon@gmail.com",
+    "url": "https://github.com/GeorgeAdamon/unity-voxel-utils"
+  }
+}

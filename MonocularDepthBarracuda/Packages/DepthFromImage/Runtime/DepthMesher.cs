@@ -177,8 +177,12 @@ namespace UnchartedLimbo.NN.Depth
                     jobs.Add(UpdateIndexBuffer());
                     jobs.Add(UpdateUVBuffer());
                 }
-                
-                ReadTextureAsync(rt,jobs);
+              
+                jobs.Add(UpdateVertexBuffer(ReadTextureAsync(rt)));
+               
+                JobHandle.CompleteAll(jobs);
+             
+                UpdateMesh(true);
             }
             // Vertex Displacement on the GPU - Mesh only needs to be created once
             else
@@ -283,7 +287,7 @@ namespace UnchartedLimbo.NN.Depth
         /// <summary>
         ///  Read a RenderTexture back to CPU
         /// </summary>
-        private void ReadTextureAsync(RenderTexture rt,  NativeList<JobHandle> jobs)
+        private NativeArray<float> ReadTextureAsync(RenderTexture rt, bool safe = false)
         {
             // Create or resize texture2D
             if (_t2d == null)
@@ -296,17 +300,20 @@ namespace UnchartedLimbo.NN.Depth
             }
             
             // Asynchronously read the data from the GPU
+            // No check whether the data has been fully received
+            // Quite possible data mixups
             var req = AsyncGPUReadback.Request(rt, 0, asyncAction =>
             {
                 if (_t2d == null) return;
                 _t2d.SetPixelData(asyncAction.GetData<byte>(), 0);
                 _t2d.Apply();
-                jobs.Add(UpdateVertexBuffer(_t2d.GetRawTextureData<float>()));
-                JobHandle.CompleteAll(jobs);
-                UpdateMesh(true);
+             
             });
+
+            if (safe)
+                req.WaitForCompletion();
             
-            req.WaitForCompletion();
+            return _t2d.GetRawTextureData<float>();
         }
     }
 }

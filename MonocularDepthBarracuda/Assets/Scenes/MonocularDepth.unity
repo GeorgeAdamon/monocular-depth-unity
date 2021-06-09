@@ -342,11 +342,11 @@ PrefabInstance:
     - target: {fileID: 5035345924445761807, guid: 4419b5bdb69bf4d409962ad2e84b8b26, type: 3}
       propertyPath: inputTexture
       value: 
-      objectReference: {fileID: 8400000, guid: 4473db5665fabc1498eb6b7a5647741b, type: 2}
+      objectReference: {fileID: 2800000, guid: d960cd9cc4fbcc04c841ae7a9237955a, type: 3}
     - target: {fileID: 5035345925824782643, guid: 4419b5bdb69bf4d409962ad2e84b8b26, type: 3}
       propertyPath: colorTexture
       value: 
-      objectReference: {fileID: 8400000, guid: 4473db5665fabc1498eb6b7a5647741b, type: 2}
+      objectReference: {fileID: 2800000, guid: d960cd9cc4fbcc04c841ae7a9237955a, type: 3}
     - target: {fileID: 5216533427654024721, guid: 4419b5bdb69bf4d409962ad2e84b8b26, type: 3}
       propertyPath: m_RootOrder
       value: 2

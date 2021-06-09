@@ -94,16 +94,16 @@ namespace UnchartedLimbo.NN.Depth
             mat.SetFloat(Max,             maxDepth);
             mat.SetFloat(DepthMultiplier, depthMultiplier);
             mat.SetFloat(LogNorm,         LogNormalizationFactor);
-            mat.SetInteger(ColorIsDepth, colorTexture == null || !useColorTexture ? 1 : 0);
-            mat.SetInteger(Displace,     method == DisplacementMethod.Mesh ? 0 : 1);
+            mat.SetInt(ColorIsDepth, colorTexture == null || !useColorTexture ? 1 : 0);
+            mat.SetInt(Displace,     method == DisplacementMethod.Mesh ? 0 : 1);
         
             // In Barracuda 1.0.4 the output of MiDaS can be passed  directly to a texture as it is shaped correctly.
             // In later versions we have to swap X and Y axes, and also flip the X axis...
             // We need to inform the shader of this change.
             #if _CHANNEL_SWAP
-                mat.SetInteger("_SwapChannels",1);
+                mat.SetInt("_SwapChannels",1);
             #else
-                mat.SetInteger("_SwapChannels",0);
+                mat.SetInt("_SwapChannels",0);
             #endif
 
         }

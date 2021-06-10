@@ -1,5 +1,5 @@
 # monocular-depth-unity
- Real-time **Depth from Monocular Image** using the [MiDaS v2](https://github.com/intel-isl/MiDaS) library with Unity's Barracuda inference framework.  
+ Real-time **Depth from Monocular Image** using the [MiDaS v2](https://github.com/intel-isl/MiDaS) neural network with Unity's Barracuda inference framework.  
  
  This project **includes** the correct .onnx model that works well with Barracuda. You can always re-download the model from its official [source](https://github.com/intel-isl/MiDaS/releases/download/v2_1/model-small.onnx) if you encounter the infamous [`InvalidProtocolBufferException` error](https://github.com/Unity-Technologies/barracuda-release/issues/143).
  

@@ -3,7 +3,7 @@
  
  This project **includes** the correct .onnx model that works well with Barracuda. You can always re-download the model from its official [source](https://github.com/intel-isl/MiDaS/releases/download/v2_1/model-small.onnx) if you encounter the infamous [`InvalidProtocolBufferException` error](https://github.com/Unity-Technologies/barracuda-release/issues/143).
  
- See discussions that led to this choice [here (Unity)](https://github.com/Unity-Technologies/barracuda-release/issues/187#issuecomment-856702114) and [here (Intel ISL)](https://github.com/intel-isl/MiDaS/issues/113#issuecomment-856693837). (June 2021)
+ See discussions that led to the choice of this specific model [here (Unity)](https://github.com/Unity-Technologies/barracuda-release/issues/187#issuecomment-856702114) and [here (Intel ISL)](https://github.com/intel-isl/MiDaS/issues/113#issuecomment-856693837). (June 2021)
 
 ![](img/example_01.png)
 ![](img/example_02.png)

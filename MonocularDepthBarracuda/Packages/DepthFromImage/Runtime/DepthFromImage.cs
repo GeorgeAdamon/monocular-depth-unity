@@ -22,8 +22,8 @@ namespace UnchartedLimbo.NN.Depth
 
         public Texture InputTexture
         {
-        get => inputTexture;
-        set=> inputTexture = value;
+            get => inputTexture;
+            set => inputTexture = value;
         }
 
         private Model         _model;

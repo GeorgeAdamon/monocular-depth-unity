@@ -11,8 +11,11 @@
 ## Requirements
 |Platform|Version|
 ---|---
-|Unity|2021.1|
-|com.unity.barracuda|2.1.0-preview|
+|Unity|2021.2 or higher|
+|com.unity.barracuda|[3.0.0](https://docs.unity3d.com/Packages/com.unity.barracuda@3.0/changelog/CHANGELOG.html)|
+|com.unity.collections|[2.1.0-pre.11](https://docs.unity3d.com/Packages/com.unity.collections@2.1/changelog/CHANGELOG.html)|
+|com.unity.mathematics|[1.2.6](https://docs.unity3d.com/Packages/com.unity.mathematics@1.2/changelog/CHANGELOG.html)|
+|com.unity.burst|[1.8.3](https://docs.unity3d.com/Packages/com.unity.burst@1.8/changelog/CHANGELOG.html)|
 
 ## Installation
 
@@ -38,6 +41,7 @@ If `Color Texture` is left blank, the mesh will be colorized with the depth data
 
 ## Performance
 **Sustained 60 fps** on GTX 970 & i7 5930K (2015 rig) when using the shader-based displacement.
+**Sustained 160 fps** on RTX 3080Ti & i7 5930K when using the shader-based displacement.
 
 ## Issues
 The mesh-based displacement doesn't fully utilize the `AsyncGPUReadback` command. A command queue needs to be implemented, to process pending commands.

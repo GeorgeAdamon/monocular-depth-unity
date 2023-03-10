@@ -20,9 +20,16 @@
 ## Installation
 
 ### Unity Package Manager
+
+#### Latest Version (Recommended)
 Add this line to your `manifest.json`:
 ```json
 "ulc-nn-depth":"https://github.com/GeorgeAdamon/monocular-depth-unity.git?path=/MonocularDepthBarracuda/Packages/DepthFromImage#main",
+```
+#### Legacy 1.0.0 Release
+Add this line to your `manifest.json`:
+```json
+"ulc-nn-depth":"https://github.com/GeorgeAdamon/monocular-depth-unity.git?path=/MonocularDepthBarracuda/Packages/DepthFromImage#v1.0.0",
 ```
 
 ## Usage

@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using Unity.Barracuda;
 using UnityEngine;
 using UnityEngine.Events;
@@ -15,11 +11,15 @@ namespace UnchartedLimbo.NN.Depth
         public NNModel neuralNetworkModel;
         public Texture       inputTexture;
 
+        [Header("Parameters")]
+        public bool calculateDepthExtents;
+        
         [Header("Events")]
+        public UnityEvent<RenderTexture> OnColorReady;
         public UnityEvent<RenderTexture> OnDepthSolved;
-
-        public UnityEvent<float> OnImageResized;
-
+        public UnityEvent<float>         OnImageResized;
+        public UnityEvent<Vector2>       OnDepthExtentsCalculated;
+        
         public Texture InputTexture
         {
             get => inputTexture;
@@ -42,12 +42,14 @@ namespace UnchartedLimbo.NN.Depth
             if (inputTexture == null)
                 return;
 
-            if (neuralNetworkModel == null)
-                return;
-
             // Fast resize
             Graphics.Blit(inputTexture, _input);
 
+            OnColorReady.Invoke(_input);
+            
+            if (neuralNetworkModel == null)
+                return;
+            
             RunModel(_input);
 
             OnImageResized.Invoke(inputTexture.height / (float) inputTexture.width);
@@ -139,15 +141,20 @@ namespace UnchartedLimbo.NN.Depth
             #endif
          
               TensorToRenderTexture(to, _output, fromChannel:0);
-            
 
-            /*
-                  var data = to.data.SharedAccess(out var o); 
-                  minDepth = data.Min();
-                  maxDepth = data.Max();             
-             */
+
+              if (calculateDepthExtents)
+              {
+                  var data     = to.data.SharedAccess(out var o);
+                  var minDepth = data.Min();
+                  var maxDepth = data.Max();  
+                  OnDepthExtentsCalculated.Invoke(new Vector2(minDepth,maxDepth));
+              }
+            
 
             to?.Dispose();
         }
+
+
     }
 }

@@ -153,7 +153,7 @@ namespace UnchartedLimbo.NN.Depth
         /// <summary>
         /// Executes when a new texture is received
         /// </summary>
-        public void OnTextureReceived(RenderTexture rt)
+        public void OnDepthReceived(RenderTexture rt)
         {
             if (rt.width * rt.height == 0) return;
 
@@ -215,7 +215,24 @@ namespace UnchartedLimbo.NN.Depth
             _previousRatio  = Ratio;
         }
 
-
+        /// <summary>
+        /// Updates the color texture
+        /// </summary>
+        public void OnColorReceived(RenderTexture rt)
+        {
+            colorTexture = rt;
+        }
+        
+        /// <summary>
+        /// Updates the Min and Max assumed depth that is represented by the Depth texture
+        /// </summary>
+        /// <param name="depthExtents"></param>
+        public void OnDepthExtentsReceived(Vector2 depthExtents)
+        {
+            minDepth = depthExtents.x;
+            maxDepth = depthExtents.y;
+        }
+        
         // --------------------------------------------------------------------
         // MESH UPDATES
         // --------------------------------------------------------------------

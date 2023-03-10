@@ -1,15 +1,14 @@
 {
   "name": "ulc-nn-depth",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "displayName": "Uncharted Limbo NN Depth",
   "description": "Implementation of MiDaS model for depth calculation from monocular images",
   "unity": "2021.1",
   "dependencies": {
-    "com.unity.barracuda": "2.1.0-preview",
-    "com.unity.jobs": "0.8.0-preview.23",
-    "com.unity.burst":"1.6.0-pre.2",
-    "com.unity.collections":"0.15.0-preview.21",
-    "com.unity.mathematics":"1.2.1"
+    "com.unity.barracuda": "3.0.0",
+    "com.unity.burst": "1.8.3",
+    "com.unity.collections": "2.1.0-pre.11",
+    "com.unity.mathematics": "1.2.6"
   },
   "keywords": [
     "Neural Network",

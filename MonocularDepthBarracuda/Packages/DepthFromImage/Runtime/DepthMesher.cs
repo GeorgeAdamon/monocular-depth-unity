@@ -296,7 +296,7 @@ namespace UnchartedLimbo.NN.Depth
             }
             else if (_t2d.width != rt.width || _t2d.height != rt.height)
             {
-                _t2d.Resize(rt.width, rt.height);
+                _t2d.Reinitialize(rt.width, rt.height);
             }
             
             // Asynchronously read the data from the GPU

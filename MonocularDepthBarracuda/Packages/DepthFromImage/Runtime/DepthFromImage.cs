@@ -20,6 +20,12 @@ namespace UnchartedLimbo.NN.Depth
 
         public UnityEvent<float> OnImageResized;
 
+        public Texture InputTexture
+        {
+            get => inputTexture;
+            set => inputTexture = value;
+        }
+
         private Model         _model;
         private IWorker       _engine;
         private RenderTexture _input, _output;
